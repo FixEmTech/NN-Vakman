@@ -1,0 +1,755 @@
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f8f9fa;
+  color: #2c2c2c;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #222;
+  height: 64px;
+  padding: 0 24px;
+  position: relative;
+  z-index: 1002;
+}
+
+header h1 {
+  margin: 0 0 8px 0;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+}
+
+header p {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: #f5a623;
+}
+
+nav {
+  /* Verwijder grijze achtergrond */
+  box-shadow: none !important;
+  /* Verwijder eventuele schaduw */
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px;
+}
+
+nav a {
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  transition: color 0.2s;
+  background: none;
+  /* Verwijder grijze achtergrond */
+  box-shadow: none;
+  /* Verwijder eventuele schaduw */
+  padding-left: 0;
+  /* Verwijder extra padding */
+  padding-right: 0;
+}
+
+nav a:hover,
+nav a:focus {
+  color: #f5a623;
+  background: none;
+  /* Geen achtergrond bij hover */
+  box-shadow: none;
+  /* Geen schaduw bij hover */
+  transform: none;
+  /* Geen vergroting bij hover */
+  border-radius: 0;
+  /* Geen afgeronde hoeken */
+  padding-left: 0;
+  padding-right: 0;
+}
+
+section {
+  background: #fff;
+  border-radius: 0;
+  box-shadow: 0 2px 12px rgba(44, 44, 44, 0.07);
+  padding: 40px 24px;
+  max-width: 900px;
+  margin: 36px auto;
+  margin-bottom: 36px;
+  /* Extra ruimte tussen de secties */
+}
+
+/* Voeg deze regel toe om extra ruimte tussen alle secties te garanderen */
+section+section {
+  margin-top: 36px;
+}
+
+h2 {
+  color: #2c2c2c;
+  margin-top: 0;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+.qr {
+  display: block;
+  max-width: 140px;
+  margin: 24px auto 12px auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(44, 44, 44, 0.08);
+}
+
+a {
+  color: #007bff;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: #f5a623;
+}
+
+footer {
+  background: #2c2c2c;
+  color: #fff;
+  text-align: center;
+  padding: 24px 0 16px 0;
+  margin-top: 40px;
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+  box-shadow: 0 -2px 8px rgba(44, 44, 44, 0.10);
+}
+
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    gap: 12px;
+    padding: 16px;
+    text-align: center;
+    align-items: center;
+  }
+
+  header img {
+    height: 90px;
+    margin-bottom: 8px;
+  }
+
+  header div {
+    align-items: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 8px 0;
+  }
+
+  nav a {
+    font-size: 1rem;
+    padding: 8px 10px;
+    margin: 2px 0;
+  }
+
+  section {
+    padding: 24px 8px;
+  }
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  height: 64px;
+}
+
+header img {
+  height: 70px;
+  margin-bottom: 0;
+  border-radius: 0;
+  box-shadow: 0 2px 8px rgba(44, 44, 44, 0.10);
+}
+
+header div {
+  text-align: left;
+}
+
+nav {
+  background-color: #444;
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+  padding: 10px 40px 10px 10px;
+}
+
+section {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.qr {
+  display: block;
+  max-width: 150px;
+  margin: 20px auto;
+}
+
+footer {
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 0;
+  border-radius: 0;
+  /* Zorgt voor rechte hoeken */
+}
+
+@media (max-width: 700px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 16px 8px;
+    height: auto;
+  }
+
+  header>a {
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    gap: 12px;
+    margin-bottom: 8px;
+  }
+
+  nav {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 0;
+    padding: 0 0 0 8px;
+    background: none;
+  }
+
+  nav a {
+    display: block;
+    width: 100%;
+    font-size: 1rem;
+    padding: 12px 0 12px 0;
+    letter-spacing: 2px;
+    text-align: left;
+    border: none;
+  }
+
+  section {
+    padding: 24px 6px;
+    max-width: 100%;
+    margin: 18px 0;
+  }
+
+  #menu-toggle {
+    display: block;
+  }
+
+  nav#main-nav {
+    display: none;
+    position: absolute;
+    top: 90px;
+    right: 0;
+    background: #2c2c2c;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    padding: 0 0 0 8px;
+    z-index: 100;
+  }
+
+  nav#main-nav.open {
+    display: flex;
+  }
+
+  nav#main-nav a {
+    display: block;
+    width: 100%;
+    padding: 16px 0 16px 16px;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    text-align: left;
+    border: none;
+  }
+
+  header {
+    flex-direction: row;
+    align-items: center;
+    gap: 0;
+    padding: 12px 8px;
+    height: 90px;
+    position: relative;
+  }
+
+  header>a {
+    flex: 1 1 auto;
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 700px) {
+  #menu-toggle {
+    display: block;
+    z-index: 201;
+    position: relative;
+  }
+
+  nav#main-nav {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    top: 100%;      /* direct onder de header */
+    right: 0;       /* helemaal rechts */
+    width: 220px;
+    background: #2c2c2c;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    padding: 0;
+    z-index: 300;
+    border-radius: 0 0 8px 8px;
+  }
+
+  nav#main-nav.open {
+    display: flex;
+  }
+
+  nav#main-nav a {
+    display: block;
+    width: 100%;
+    padding: 16px 0 16px 24px;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    text-align: left;
+    border: none;
+    background: none;
+    color: #fff;
+  }
+}
+
+main {
+  flex: 1;
+}
+
+/* Algemene layout */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+main {
+  flex: 1;
+}
+footer {
+  margin-top: auto;
+}
+
+/* Galerij */
+.gallery-section {
+  padding: 32px 16px 24px 16px;
+  background: #faf9f7;
+  text-align: center;
+}
+.gallery-title {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #2c2c2c;
+  margin-bottom: 24px;
+  letter-spacing: 0.5px;
+}
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+  align-items: flex-start;
+}
+.gallery img {
+  max-width: 320px;
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(44,44,44,0.08);
+  object-fit: cover;
+  transition: transform 0.2s;
+  background: #fff;
+}
+.gallery img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 32px rgba(44,44,44,0.14);
+}
+@media (max-width: 900px) {
+  .gallery {
+    gap: 16px;
+  }
+  .gallery img {
+    max-width: 90vw;
+  }
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+.logo1 {
+  display: flex;
+  flex-direction: column;
+  margin-left: 8px;
+}
+.Vakman {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1;
+}
+.Trapvloer {
+  font-size: 1rem;
+  color: #f5a623;
+  margin-top: -2px;
+  line-height: 1;
+}
+
+/* MENU RECHTS */
+.Menu {
+  display: none;
+}
+.Menu a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  opacity: 0.85;
+  padding: 0 4px;
+  transition: color 0.2s;
+}
+.Menu a:hover {
+  color: #f5a623;
+  opacity: 1;
+}
+
+/* HAMBURGER ALLEEN OP MOBIEL */
+.hamburger {
+  display: none;
+}
+@media (max-width: 800px) {
+  .Menu {
+    display: none;
+  }
+  .Menu.open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    background: #222;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    border-radius: 0 0 8px 8px;
+    min-width: 160px;
+    z-index: 1001;
+    padding: 16px 0;
+    gap: 0;
+  }
+  .hamburger {
+    display: flex !important;
+    z-index: 2002;
+  }
+}
+
+/* NN-logo wit, groot en overlappend */
+.nn-logo {
+  display: inline-block;
+  position: relative;
+  width: 48px;
+  height: 48px;
+  margin-right: 12px;
+  vertical-align: middle;
+}
+
+.nn-letter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  font-size: 2.8rem;
+  font-weight: 900;
+  color: #fff;
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+}
+
+.nn-letter.left {
+  z-index: 2;
+  left: 0;
+  opacity: 1;
+}
+
+.nn-letter.right {
+  z-index: 1;
+  left: 12px; /* schuif iets naar rechts voor overlap */
+  opacity: 0.85;
+}
+
+nav#main-nav {
+  display: none;
+  position: absolute;
+  top: 90px;
+  right: 0;
+  background: #2c2c2c;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+  padding: 0 0 0 8px;
+  z-index: 100;
+}
+
+nav#main-nav.open {
+  display: flex;
+}
+
+nav#main-nav a {
+  display: block;
+  width: 100%;
+  padding: 16px 0 16px 16px;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  text-align: left;
+  border: none;
+}
+
+/* HEADER LAYOUT */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #222;
+  height: 64px;
+  padding: 0 24px;
+  position: relative;
+  z-index: 1002;
+}
+
+/* LOGO EN SLOGAN */
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+.logo1 {
+  display: flex;
+  flex-direction: column;
+  margin-left: 8px;
+}
+.Vakman {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1;
+}
+.Trapvloer {
+  font-size: 1rem;
+  color: #f5a623;
+  margin-top: -2px;
+  line-height: 1;
+}
+
+/* MENU RECHTS */
+.Menu {
+  display: none;
+}
+.Menu a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  opacity: 0.85;
+  padding: 0 4px;
+  transition: color 0.2s;
+}
+.Menu a:hover {
+  color: #f5a623;
+  opacity: 1;
+}
+
+/* HAMBURGER ALLEEN OP MOBIEL */
+.hamburger {
+  display: none;
+}
+@media (max-width: 800px) {
+  .Menu {
+    display: none;
+  }
+  .Menu.open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    background: #222;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    border-radius: 0 0 8px 8px;
+    min-width: 160px;
+    z-index: 1001;
+    padding: 16px 0;
+    gap: 0;
+  }
+  .hamburger {
+    display: flex !important;
+    z-index: 2002;
+  }
+}
+
+/* HERO BLOK */
+.hero {
+  max-width: 900px;
+  margin: 48px auto 0 auto;
+  padding: 40px 32px 32px 32px;
+  background: #fff;
+  border-radius: 24px;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.10);
+  text-align: center;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #232323;
+  letter-spacing: -1px;
+}
+
+.hero h2 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 28px;
+  color: #f5a623;
+  letter-spacing: 0.5px;
+}
+
+.hero p {
+  font-size: 1.15rem;
+  max-width: 700px;
+  margin: 0 auto 12px auto;
+  color: #444;
+  line-height: 1.6;
+}
+
+.hero p:last-of-type {
+  font-size: 1.08rem;
+  margin-bottom: 32px;
+}
+
+/* GALLERY */
+.hero-gallery {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 32px;
+  margin: 36px 0 0 0;
+  flex-wrap: wrap;
+}
+
+.hero-image-box {
+  background: #faf9f7;
+  border-radius: 18px;
+  box-shadow: 0 6px 32px rgba(0,0,0,0.10), 0 1.5px 6px rgba(245,166,35,0.08);
+  padding: 14px;
+  max-width: 220px;
+  min-width: 180px;
+  min-height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.18s, box-shadow 0.18s;
+  position: relative;
+}
+
+.hero-image-box:hover {
+  transform: translateY(-8px) scale(1.04);
+  box-shadow: 0 16px 48px rgba(0,0,0,0.16), 0 2px 8px rgba(245,166,35,0.13);
+}
+
+.hero-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  object-fit: cover;
+  background: #eaeaea;
+  min-height: 160px;
+  max-height: 260px;
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+  .hero-gallery {
+    gap: 18px;
+  }
+  .hero {
+    padding: 24px 8px 24px 8px;
+  }
+}
+@media (max-width: 700px) {
+  .hero-gallery {
+    flex-direction: column;
+    gap: 18px;
+    align-items: center;
+  }
+  .hero-image-box {
+    max-width: 95vw;
+    min-width: 0;
+  }
+}
+
